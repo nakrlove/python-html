@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS position 속성</title>
+  <!-- <style>
+    p {
+      width:500px;
+      height:200px;
+      background-color:#eee;
+      border:1px solid #ccc;
+      line-height:2;
+    }
+    #static {
+      position:static;
+    }
+    #relative-1{
+      position:relative;
+    }
+    #relative-2 {
+      position:relative;   /* 포지셔닝 - relative */
+      left:100px;  /* 왼쪽에서 100px 떨어지게 */
+      top:-50px;   /* 위쪽에서 -50px 떨어지게 (위로 이동) */
+    }
+    #fixed {
+      width:100px;
+      height:100px;
+      background-color:#222;
+      position:fixed;  /* 포지셔닝 - fixed */
+      right:30px;  /* 오른쪽에서 30px 떨어지게 */
+      top:30px;  /* 위쪽에서 30px 떨어지게 */
+    }
+  </style> -->
+  <style>
+   
+    /* #box1{
+      background-color: yellow;
+      float:left;
+      text-align: center;
+      text-justify: auto;
+    }
+    #box2{
+      background-color: blue;
+      float:right;
+      text-align: center;
+      clear:both
+    } */
+    .box{
+        background: blue;
+        width: 100px;
+        height: 100px;
+        margin: 0px 10px
+    }
+    #fixed {
+      /* width:100px; */
+      /* height:100px; */
+      /* background-color:#222; */
+      position:fixed; /* 포지셔닝 / fixed */
+      right:30px;  /* 오른쪽에서 30px 떨어지게 */
+      /* top:30px;  /* 위쪽에서 30px 떨어지게 */
+      bottom:30px;  /* 아래쪽에서 30px 떨어지게 */
+    }
+    #id1{
+      letter-spacing: 2px;
+      position: static;
+    }
+    #id2{
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+   <p id="id1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos id aliquid impedit doloremque porro, ad dolore quo, accusamus voluptates culpa soluta harum necessitatibus animi. Nobis molestiae ipsam aut sit nisi!</p>
+   <p id="id2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos id aliquid impedit doloremque porro, ad dolore quo, accusamus voluptates culpa soluta harum necessitatibus animi. Nobis molestiae ipsam aut sit nisi!</p>
+   <p id="id3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos id aliquid impedit doloremque porro, ad dolore quo, accusamus voluptates culpa soluta harum necessitatibus animi. Nobis molestiae ipsam aut sit nisi!</p>
+   <p id="id4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos id aliquid impedit doloremque porro, ad dolore quo, accusamus voluptates culpa soluta harum necessitatibus animi. Nobis molestiae ipsam aut sit nisi!</p>
+   <p id="id5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos id aliquid impedit doloremque porro, ad dolore quo, accusamus voluptates culpa soluta harum necessitatibus animi. Nobis molestiae ipsam aut sit nisi!</p>
+   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos id aliquid impedit doloremque porro, ad dolore quo, accusamus voluptates culpa soluta harum necessitatibus animi. Nobis molestiae ipsam aut sit nisi!</p>
+   <div class="box" id="fixed">
+     Fixed Box
+
+   </div>
+  </body>
+</html>

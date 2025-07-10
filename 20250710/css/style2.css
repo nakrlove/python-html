@@ -1,0 +1,27 @@
+
+div1 {
+    /* display: inline-block; */
+    border: 1px solid blue;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    line-height: 140px;
+    /* margin: 200px 300px; */
+    margin: 50px auto;
+}
+
+button{
+    padding: 3px 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* display: flex; */
+}
+
+#wrapper{
+    /* border: 1px solid blue; */
+    width: 200px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+} 

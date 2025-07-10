@@ -1,0 +1,62 @@
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+.pp-span{
+        font-family: "Dongle", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 80px;
+}
+.spaced{
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    letter-spacing : 0.2em;
+    text-transform: uppercase; 
+}
+.box {
+    box-sizing: border-box;
+    border-style: dashed;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 20px;
+    padding: 0px;
+    border:1px solid rgb(255,255,255);
+
+}
+.shadow{
+    box-shadow: 5px 5px 15px blue;
+    border-radius: 10px;
+}
+.box-new {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10%;
+
+    /* border: 2px dashed; */
+}
+.cat{
+    border-radius:  25px;
+}
+
+.photo{
+    border-radius:  50%;
+}
+
+
+/* https://neumorphism.io/#e0e0e0 참조사이트 */
+button{
+border-radius: 118px;
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  5px 5px 10px #a8a8a8,
+             -5px -5px 10px #ffffff;
+}

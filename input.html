@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레드향 주문하기</title>
+  <link rel="stylesheet" href="css/form2.css">
+</head>
+<body>
+ 
+  <form action="p.html" method="post" target="_self">
+  <fieldset>
+    <legend>배송 정보</legend>
+    <ul>
+        <li>
+            <label for="user-name">이름:
+            <input type="text" id="user-name" required>
+            </label>
+        </il>
+        <li>
+             <label for="addr">배송주소:
+             <input type="text" id="addr"></label>
+        </li>
+        <li>
+            <label for="email">이메일:
+            <input type="text" id="email" autofocus></label>
+        </li>
+        <li>
+            <label for="rd">레디오:
+            <input type="radio" name="mailing" id="rd" value="Y" > 메일받음
+            <input type="radio" name="mailing" id="rd" value="N" checked>메일 안받음</label>
+           </label>
+        </li>
+    </ul>
+  </fieldset> 
+  <textarea rows="10" cols="100"></textarea>
+  <label for="prod">상품선택</label>
+  <select id="prod">
+    <optgroup label="1차">
+            <option value="spectial_3">선물용 3kg</option>
+            <option value="spectial_5" selected>선물용 5kg</option>
+            <option value="family_3">가정용 3kg</option>
+            <option value="family_3">가정용 5kg</option>
+    </optgroup>
+    <optgroup label="2차">
+        <option value="spectial_3">선물용 3kg</option>
+        <option value="spectial_5" selected>선물용 5kg</option>
+        <option value="family_3">가정용 3kg</option>
+        <option value="family_3">가정용 5kg</option>
+    </optgroup>
+   </select>
+  <input type="submit">
+  </form>
+  
+</body>
+</html>

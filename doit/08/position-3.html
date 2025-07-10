@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <style>
+    .box {
+        width: 100px;
+        height: 100px;
+    }
+
+    #fixed{
+      position: fixed;
+      right:30px;
+      bottom:30px;
+    }
+    #box1 {
+        position: static;
+        background: red;
+        
+    }
+    #box2 {
+      position: relative;
+      background: yellow;
+      left: 200px;  
+    }
+    #box3 {
+      position: absolute;
+      background: blue;
+      left: 150px;
+      top: 50px; /* 상단에서 50px 떨어지게 */
+    }
+    #box4 {
+        background: violet;
+    }
+    #fixed {
+        position: fixed; /* 포지셔닝 - fixed */
+        right: 30px; /* 오른쪽에서 30px 떨어지게 */
+        bottom: 30px; /* 아래쪽에서 30px 떨어지게 */
+    }
+    .wrapper {
+      margin: 20px;
+      width: 500px;
+      height: 400px;
+      border: 1px solid black;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box" id="box1">box1</div>
+    <div class="box" id="box2">box2</div>
+    <div class="box" id="box3">box3</div>
+    <div class="box" id="box4">box4</div>
+    <div class="box" id="fixed">fixed</div>
+  </div>
+</body>
+</html>
+ 

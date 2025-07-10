@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>폰트 어썸</title>		
+		<style>
+			ul {
+				list-style: none;
+				display: flex;
+			}
+			li {    
+        border: 1px solid #222;
+				padding:10px 20px;
+        margin-right: 10px;
+			}
+			a {
+				text-decoration: none;
+			}
+		    a.menu1{
+				color:#9b1919
+				/* color: red,blue,green; */
+				/* color: rgb(0, 0, rgb(255, 25, 0)); */
+				/* color: rgb(0, 0, rgb(255, 25, 0)); */
+				/* color: hsl(hue, saturation, lightness); */
+			/* 
+			1. 글자: red,blue..
+			2. rgb :red,green,blue
+			3. hs1 :
+			4. 16진수 : #
+			*/
+			}
+			a:link, a:visited, a:hover {
+				color:#222;
+			}			
+		</style>
+		<!-- Do it! 아이콘 폰트 CDN 링크하기 -->
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<!-- Do it! 메뉴에 아이콘 폰트 추가하기 -->
+				<li>			
+					<i class="fa-solid fa-house-chimney"></i>	
+					<a href="#" class="menu1">메뉴1</a>
+					<i class="fa-regular fa-calendar-check"></i>	
+				</li>
+				<li>
+					<i class="fa-solid fa-circle-user"></i>
+					<a href="#">메뉴2</a>					
+				</li>
+				<li>
+					<i class="fa-solid fa-bell"></i>
+					<a href="#">메뉴3</a>
+				</li>
+			</ul>
+		</nav>
+	</body>
+</html>

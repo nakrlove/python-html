@@ -1,0 +1,9 @@
+* {margin:0;}
+p { color: blue;
+    background: #000; 
+}
+span{color: red;}
+h1{
+    color:brown;
+    background-color: azure;
+}
