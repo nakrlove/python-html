@@ -9,15 +9,30 @@
       margin:50px auto;
     }
     .box{
-      float:left;
+      /* float:left; */
       border:1px solid #222;
       width:300px;
       height:300px;      
       margin:20px;
-      background:url('images/bg4.jpg') no-repeat left top;
+      /* background:url('../images/bg4.jpg') no-repeat left top; */
+      background:url('../images/bg2.png') no-repeat left top;
     }
     /* Do it! #bg1 ~ #bg6 스타일을 사용해 배경 이미지 크기 조절하기 */
-
+    #bg1{
+      background-size: auto; /* 배경 이미지 크기 조절 */
+    }
+    #bg2{
+      background-size: 50%; /* 배경 이미지 크기 조절 */
+    }
+    #bg3{
+      background-size: 100% 100%; /* 배경 이미지 크기 조절 */
+    }
+    #bg4{
+      background-size: contain; /* 배경 이미지 크기 조절 */
+    }
+    #bg5{
+      background-size: cover; /* 배경 이미지 크기 조절 */
+    }
   </style>
 </head>
 <body>

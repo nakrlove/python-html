@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 50px;
+            /* position: relative; */
+        }
+        .wrapper{
+            width: 400px;
+            height: 400px;
+            border:  1px solid black;
+            margin:  50 auto;
+            position: relative; /* 자식 요소의 절대 위치 지정 기준 */
+            background: lightgray;
+        }
+
+        #box1{
+            position: absolute;
+            left : 1px; 
+            top: 1px; /* 위쪽에서 10px 떨어지게 */
+            background: blueviolet;
+            z-index: 1;
+        }
+
+        #box2{
+            position: absolute;
+            left : 10px; 
+            top: 10px;
+            /* background-position: right center ;  */
+             background: red;
+              z-index: 2;
+        }
+
+        #box3{
+            position: absolute;
+            left : 20px; 
+            top: 20px;
+            /* background-position: right center ;  */
+            background: rgb(93, 88, 82);
+             z-index: 3;
+        }
+        #box4{
+            position: absolute;
+            right : 10px; 
+            bottom: 10px;
+            /* background-position: right center ;  */
+            background: rgb(135, 155, 222);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+    </div>
+</body>
+</html>

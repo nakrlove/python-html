@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM - addEventListener</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: red;
+    }
+    img {
+      padding: 20px;
+      height: 250px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/kitty-1.png" id="cat">		
+  </div>
+  
+	<script>
+    function chagneF() {
+      console.log('333')
+    }
+    // Do it! 이벤트 리스너로 이벤트 처리하기
+    let cat = document.querySelector('#cat')
+    // cat.onclick = function(event){
+    cat.addEventListener("click",chagneF,false);
+    cat.addEventListener("mouseover",() => {
+      cat.style.backgroundColor ='green';
+      cat.style.borderRadius = '50%'
+    },false);
+    cat.addEventListener("mouseout",() => {
+      cat.style.backgroundColor ='';
+      cat.style.borderRadius = ''
+    },false);
+	</script>
+</body>
+</html>

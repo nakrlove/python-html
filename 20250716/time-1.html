@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What time is it?</title>
+	<style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+			font-size: 1.2em;
+      border: 1px solid black;
+      width: 700px;
+      height: 500px;
+      line-height: 500px;
+      margin: 0 auto;
+    }
+	</style>
+</head>
+<body>
+	<script>
+    // Do it! Date 객체를 사용하여 현재 날짜와 시간을 표시하기
+    // let now = new Date();
+    // document.write(`현재시간 : ${now.toLocaleString()}`)
+    // console.log(now)
+
+
+    let obj = {
+      title: "JavaScript 객체",
+
+      func : function(a, b) {
+        return a + b;
+      },
+
+      name : function() {
+          return this.title ;
+      },
+
+      calc: function() {
+        return this.func;
+      },
+      
+    }
+
+
+// 
+    //  console.log(obj.title)
+    // console.log(obj.func(1,2))
+    // console.log(obj.name())
+
+
+    let v = new Array(1,2,3,4,5)
+    v.forEach(item => {
+      document.write(item)
+      document.write("</br>")
+    })
+
+    console.log(v.push(10,11))
+    console.log(v)
+	</script>
+</body>
+</html>
+

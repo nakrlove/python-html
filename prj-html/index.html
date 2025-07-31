@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>macOS 스타일 홈페이지</title>
+
+  <link rel="stylesheet" href="./css/settings.css"></style>
+  <link rel="stylesheet" href="css/main.css" ></style>
+  <link rel="stylesheet" href="css/font.css" ></style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cagliostro&family=Dancing+Script:wght@400..700&family=Dongle&family=Noto+Sans+KR:wght@600&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cagliostro&family=Dancing+Script:wght@618&family=Dongle:wght@300;400;700&family=Noto+Sans+KR:wght@900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cagliostro&family=Dancing+Script:wght@618&family=Dongle:wght@300;400;700&family=Gaegu&family=Noto+Sans+KR:wght@900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- 왼쪽 Bar -->
+  <div class="dock-left">
+    <div class="icon" draggable="true" style="background-image: url('images/mac-os-logo.png');" alt="나의시스템"></div>
+    <div class="icon" draggable="true" style="background-image: url('images/python.png');" alt="python"></div>
+    <div class="icon" draggable="true" style="background-image: url('images/logo.png');" alt="미지정"></div>
+    <div class="icon" draggable="true" style="background-image: url('images/chrome.png');" alt="google"></div>
+    <div class="icon" draggable="true" style="background-image: url('images/android.png');" alt="android"></div>
+    <div class="icon" draggable="true" style="background-image: url('images/settings.png');" alt="설정"></div>
+    <!-- 시계 영역 -->
+    <div class="clock">
+      <div id="time">--:--:--</div>
+      <div id="date">YYYY.MM.DD</div>
+    </div>
+  </div>
+
+  <!-- 설정화면 -->
+  <div id="settingsPanel" class="settings-panel hidden">
+    <!-- 설정 title-->
+    <div class="settings-header">
+      <img src="images/settings.png" alt="Python" class="settings-avatar">
+      <span class="settings-label dongle-regular">설정</span>
+      <button id="closeSettingsBtn" class="close-button">×</button>
+    </div>
+    <!-- docker 설정-->
+    <div class="settings-item">
+      <label class="settings-label dongle-regular">docker 숨기기</label>
+      <label class="switch">
+        <input type="checkbox" id="docker-check" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    <!-- 디스플레이 설정-->
+    <div class="settings-item">
+      <label class="settings-label dongle-regular">화면 모드</label>
+      <select id="themeSelect" class="settings-select">
+        <option value="#e0e0e0, #ffffff">default</option>
+        <option value="#f5f5f5, #ffffff">White</option>
+        <option value="#111111, #333333">Dark</option>
+      </select>
+    </div>
+    <!-- 폰트 설정-->
+    <div class="settings-item settings-fonts">
+      <label class="settings-label dongle-regular">폰트</label>
+      <select id="fontSelect" class="settings-select">
+        <option value="Noto">Noto Sans KR</option>
+        <option value="Black">Black Han Sans</option>
+        <option value="Gaegu">Gaegu</option>
+      </select>
+    </div>
+    
+  </div>
+
+  <!-- 메인 화면 -->
+  <div class="main-content div-hidden" id="main1">
+      <iframe id="iframeViewer" style="width: 90%; height: 90vh; border: none; overflow: hidden; scrolling: no;"></iframe>
+  </div>
+
+  <div class="main-content dongle-regular" id="main2">
+      <span class="settings-label" id="titleText">AI + X 과정 Home화면</span>
+  </div>
+  
+  <script src="script/script.js"></script>
+  <script src="script/bar.js"></script>
+  <script src="script/settings.js"></script>
+  <script>
+
+   
+
+
+      /////////////////// 실시간 시간/날짜표시  /////////////////
+      function updateClock() {
+          const now = new Date();
+
+          // 시/분/초
+          const timeStr = now.toLocaleTimeString('ko-KR', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+          });
+
+          // 기본 날짜 포맷 (예: "2025. 07. 17.")
+          let rawDate = now.toLocaleDateString('ko-KR', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+          });
+
+          // 마지막 "." 제거 + "일" 붙이기
+          if (rawDate.endsWith('.')) {
+            rawDate = rawDate.slice(0, -1); // 끝에 "." 제거
+          }
+
+          document.getElementById('time').textContent = timeStr;
+          document.getElementById('date').textContent = rawDate;
+      }
+      // 최초 실행 및 매초마다 갱신
+      updateClock();
+      setInterval(updateClock, 1000);
+      /////////////////// 실시간 시간/날짜표시  /////////////////
+  </script>
+</body>
+</html>

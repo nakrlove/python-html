@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            justify-content: flex-end;
+             /* flex-flow: row wrap;    */
+             /* 왼쪽에서 오른쪽, 여러 줄 표시 */
+            /* align-items: center;  */
+            /* align-content: center; */
+            border: 1px solid ;
+            height: 200px;
+            align-items: center;
+        }
+        .boxwrapper{
+            border: 1px solid;
+            height: 150px;
+        }
+        .box {
+            padding:5px 45px;
+            margin:5px;   
+            width:0px;
+            height: 10px;
+        }   
+        .box:nth-child(2n+1){
+            background: red;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="boxwrapper">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <div class="boxwrapper">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <div class="boxwrapper">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>    
+
+</body>
+</html>

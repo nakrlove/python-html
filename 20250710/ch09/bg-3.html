@@ -5,9 +5,11 @@
   <title>배경 이미지</title>
   <style>    
     body {  
-      background-image:url('images/bg2.png');  /* 문서 전체 배경 이미지 */ 
+      background-image:url('../images/bg2.png');  /* 문서 전체 배경 이미지 */ 
       /* Do it! 문서 전체 배경 이미지 오른쪽 상단에 고정하기 */
-
+      background-repeat: no-repeat; 
+      background-position: right top;  /* 배경 이미지를 오른쪽 상단에 위치시킴 */
+      background-attachment: fixed;
     }
     div {
       width:400px;
@@ -16,12 +18,15 @@
       border: 20px  solid rgba(204, 204, 204, 0.493);        
       margin-bottom:20px;
       overflow:auto;
-      background-image:url('images/bg3.png');  /* 텍스트 상자의 배경 이미지 */
-      background-repeat:no-repeat;  /* 배경 이미지 반복 안 함 */      
+      background-image:url('../images/bg3.png');  /* 텍스트 상자의 배경 이미지 */
+      background-repeat: no-repeat;  /* 배경 이미지 반복 안 함 */      
       background-position:right top;  /* 배경 이미지를 오른쪽 상단에 위치시킴 */
     }
     /* Do it! #bg1 ~ #bg3 스타일을 사용해 배경 이미지 범위 지정하기 */
-
+    #bg1{
+      background-origin: content-box;
+    }
+    
   </style>
 </head>
 <body>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>플렉스 박스 레이아웃</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+         flex-flow: row wrap;   /* 왼쪽에서 오른쪽, 여러 줄 표시 */
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    .Print {
+      position: absolute;
+      width: 40vw;
+      height: 15vh;
+      background-color: rgba(255, 255, 200, 0.9);
+      border: 1px solid #222;
+      display: none;
+      z-index: 10;
+    } 
+
+    .box {
+      padding: 5px;
+      border: 1px solid brown;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    .BWrapper {
+      display: flex;
+      position: relative; /* 기준점 */
+      justify-content: center;
+      align-items: center;
+    }   
+    
+    /*
+     버튼위에 마우스가 올라갔을때 
+     메세지가 버튼위에 출력한다
+     */  
+    /* .BWrapper:hover .Print {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+
+   /* .container:has(.BWrapper:hover) .Print {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  /*
+  .Print:has(~.BWrapper:hover){
+    color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  */
+  </style>
+</head>
+<body>
+   <div class="container">
+        <div class="Print"><p>수고하셨습니다.</p></div>
+        <div class="BWrapper">
+          <div class="box"><button onclick="changeEvent()">버튼</button></div>
+        </div> 
+    </div>   
+    
+    <script>
+   
+    /*
+    // 1. 변수에 할당
+      let addNumber = function(a,b){return a+b}
+    // 2. 즉시실행함수
+      let a = (function(a,b){return a+b})(1,20)
+    // 3. 화살표함수
+      let addn = (a,b) => a + b
+    */
+
+
+      
+    let param = (a,b) => a * b
+    
+    let mfunc = function(a, b, p){
+      return p(a,b)   //물음표에는 어떻게 바꿔야 하나요?
+    }
+    console.log(mfunc(1,2,param))
+
+    function changeEvent(){
+      let obj = document.querySelector('.container')
+      obj.style.height = "200px"
+    }
+   
+    </script>
+</body>
+</html>

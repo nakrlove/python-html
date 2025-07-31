@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #fa0;
+      /* Do it! 2초 동안 애니메이션 실행하기 */
+      animation: slideAndRotate 2s alternate-reverse 3;
+      /* animation-name: slideRight, rotate;
+      animation-duration: 2s, 2s;
+      animation-iteration-count: 3, 3;
+      animation-direction: alternate-reverse, alternate-reverse; */
+    }
+
+    /* Do it! @keyframes로 애니메이션 정의하기 */
+    @keyframes slideRight {
+      from{ transform: translateX(0);}
+      to  { transform: translateX(500px);}
+    }
+    @keyframes rotate {
+      0%   {transform: rotate(0deg );}
+      50%  {transform: rotate(-180deg);}
+      100% {transform: rotate(-360deg);}
+    }
+
+
+  @keyframes slideAndRotate {
+      0% {
+        transform: translateX(0) rotate(0deg);
+        background-color: aqua;
+      }
+      50% {
+        transform: translateX(250px) rotate(180deg);
+        background-color: orange;
+      }
+      100% {
+        transform: translateX(500px) rotate(360deg);
+        background-color: red;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+	<div class="box">	</div>
+</body>
+</html>
